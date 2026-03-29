@@ -1,18 +1,14 @@
-package problem3;
+package problem4;
 
 import java.util.Arrays;
 
 public class MainApp {
 
-    public static void mergeSort(int[] arr) {
-        Arrays.sort(arr);
-    }
-
     public static void main(String[] args) {
-        int[] arr = {500, 100, 300};
+        double[] returns = {12, 8, 15};
 
-        mergeSort(arr);
+        Arrays.sort(returns);
 
-        System.out.println(Arrays.toString(arr));
+        System.out.println(Arrays.toString(returns));
     }
 }
