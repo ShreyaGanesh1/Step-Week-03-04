@@ -1,40 +1,18 @@
-package problem2;
+package problem3;
 
-class Client {
-    String name;
-    int risk;
-
-    Client(String name, int risk) {
-        this.name = name;
-        this.risk = risk;
-    }
-}
+import java.util.Arrays;
 
 public class MainApp {
 
-    public static void bubbleSort(Client[] arr) {
-        for (int i = 0; i < arr.length - 1; i++) {
-            for (int j = 0; j < arr.length - i - 1; j++) {
-                if (arr[j].risk > arr[j + 1].risk) {
-                    Client temp = arr[j];
-                    arr[j] = arr[j + 1];
-                    arr[j + 1] = temp;
-                }
-            }
-        }
+    public static void mergeSort(int[] arr) {
+        Arrays.sort(arr);
     }
 
     public static void main(String[] args) {
-        Client[] arr = {
-                new Client("A", 20),
-                new Client("B", 50),
-                new Client("C", 80)
-        };
+        int[] arr = {500, 100, 300};
 
-        bubbleSort(arr);
+        mergeSort(arr);
 
-        for (Client c : arr) {
-            System.out.println(c.name + ":" + c.risk);
-        }
+        System.out.println(Arrays.toString(arr));
     }
 }
