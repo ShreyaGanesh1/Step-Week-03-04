@@ -1,23 +1,19 @@
-package problem5;
-
-import java.util.Arrays;
+package problem6;
 
 public class MainApp {
 
     public static void main(String[] args) {
-        String[] arr = {"accB", "accA", "accB", "accC"};
+        int[] arr = {10, 25, 50, 100};
+        int target = 30;
 
-        // Linear search
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i].equals("accB")) {
-                System.out.println("Found at index: " + i);
-                break;
-            }
+        int floor = -1, ceil = -1;
+
+        for (int num : arr) {
+            if (num <= target) floor = num;
+            if (num >= target && ceil == -1) ceil = num;
         }
 
-        Arrays.sort(arr);
-
-        int index = Arrays.binarySearch(arr, "accB");
-        System.out.println("Binary index: " + index);
+        System.out.println("Floor: " + floor);
+        System.out.println("Ceiling: " + ceil);
     }
 }
